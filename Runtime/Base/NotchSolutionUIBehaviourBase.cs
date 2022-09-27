@@ -114,6 +114,7 @@ namespace E7.NotchSolution
 
         private void UpdateRectBase()
         {
+            if (!this) return;
             if (!(enabled && gameObject.activeInHierarchy))
             {
                 return;
@@ -124,7 +125,7 @@ namespace E7.NotchSolution
 
         private async UniTask DelayedUpdate()
         {
-            await UniTask.NextFrame();
+            await UniTask.DelayFrame(10);
             UpdateRectBase();
         }
         
