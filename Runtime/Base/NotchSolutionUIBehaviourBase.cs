@@ -125,7 +125,7 @@ namespace E7.NotchSolution
 
         private async UniTask DelayedUpdate()
         {
-            await UniTask.Delay(100);
+            await UniTask.WaitForFixedUpdate();
             UpdateRectBase();
         }
         
