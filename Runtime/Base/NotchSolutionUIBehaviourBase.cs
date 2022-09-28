@@ -58,6 +58,7 @@ namespace E7.NotchSolution
         {
             base.OnEnable();
             await DelayedUpdate();
+            LayoutRebuilder.ForceRebuildLayoutImmediate(rectTransform);
         }
 
         /// <summary>
