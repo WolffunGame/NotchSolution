@@ -58,7 +58,6 @@ namespace E7.NotchSolution
         {
             base.OnEnable();
             await DelayedUpdate();
-            LayoutRebuilder.ForceRebuildLayoutImmediate(rectTransform);
         }
 
         /// <summary>
@@ -126,7 +125,7 @@ namespace E7.NotchSolution
 
         private async UniTask DelayedUpdate()
         {
-            await UniTask.WaitForFixedUpdate();
+            await UniTask.Delay(200);
             UpdateRectBase();
         }
         
